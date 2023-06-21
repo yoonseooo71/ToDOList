@@ -66,7 +66,7 @@ function SearchSection({todoData,isSearch, setSearchData, setIsSearch,setPage,se
   return (
     <Wrapper>
       <SearchBox isoption={isOption.toString()}>
-        <Search ref={searchRef} placeholder="검색할내용을 입력하세요"/> 
+        <Search ref={searchRef} placeholder="검색할내용을 입력해주세요"/> 
         <IconBox>
           <SearchAnimationIcon onClick={searchEvent}/>
           {isOption ? (

@@ -134,7 +134,7 @@ function Todo({ data, setTodoData,setSearchData, todoData, searchData, isSearch 
         </>
       ) : (
         <>
-          <EditInput ref={editInputRef} />
+          <EditInput ref={editInputRef} placeholder="수정할내용을 입력해주세요"/>
           <IconBox>
             <DoneIcon {...svgStyle} onClick={editEvent} />
             <CloseIcon {...svgStyle} onClick={() => setIsEddit(!isEddit)} />

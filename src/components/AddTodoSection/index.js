@@ -35,7 +35,7 @@ function AddTodoSection({ todoData, setTodoData, id, setId }){
   
   return (
     <AddTodoBox>
-      <AddTodoInput ref={inputRef} placeholder="ex) 택스트 @참조id @참조id2"/>
+      <AddTodoInput ref={inputRef} placeholder="ToDo 작성 ex) 택스트 @참조id @참조id2"/>
       <AddTodoBtn onClick={addTodoEvent}>Add Todo</AddTodoBtn>
     </AddTodoBox>
   )
