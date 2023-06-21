@@ -84,7 +84,7 @@ function Todo({ data, setTodoData,setSearchData, todoData, searchData, isSearch 
       );
       setTodoData(tempTodoData);
       setIsEddit(!isEddit);
-      /**검색중 수정할때 검색 데이터도 바꿔주기 */
+      /**검색중 todo 수정할때 검색 데이터도 바꿔주기 */
       if (isSearch === true) {
         console.log("edit")
         const tempSearchData = searchData.map((todo) =>
