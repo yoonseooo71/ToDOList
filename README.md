@@ -1,70 +1,50 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# ToDo List (일정관리)
+## 사용한 기술 
+> + HTML
+> + CSS
+> + JavaScript
+> + React
+> + StyledComponent
+> + localStorage
+## 구현한 기능 
+> + 검색 기능 (text, 완료 여부, 날짜, 등)
+> + 사용자는 문자열로 된 todo 항목을 추가 할 수 있다.
+> + todo는 다른 todo들을 참조할 수 있다.
+> + 사용자는 todo 목록을 조회할 수 있다.
+> + 페이지 네이션 구현
+> + 사용자는 todo를 수정할 수 있다.
+> + 사용자는 todo를 삭제할 수 있다.
+> +사용자는 todo를 완료 또는 미완료로 상태변경을 할 수 있다.
+> + 참조하고 있는 todo들이 모두 완료 상태가 아니라면 todo를 완료할 수 없다
+> + todo 글이 생략된 것은 클릭시 자세히 볼수 있다.
+## 설명 
+### todo생성시 다른 todo 참조하는 방법
+> + 입력내용을 "입력글 + @다른todoId" 와같이 @를 사용하여 입력하면 참조할수있다
+> + ex) "밥먹기 @2 @3" (id 2,3 번 todo 참조 )
+### 검색옵션 
+> + 검색창 오른쪽의 icon을 눌르면 검색옵션이 나온다,
+> + 완료 체크박스를 클릭후 검색하면 완료한 todo만 검색된다.
+> + 날찌박스 왼쪽과 오른쪽 모두 날짜 선택후 검색시 왼쪽날짜박스 날짜와 오른쪽 날짜박스 날짜사이의 생성짜의 todo만 검색된다.
+> + 검색초기화 버튼을 눌르면 기존의 전체 todo가 뜬다.
+### 글 정보
+> + 글자 밑에 정보가있다
+> + 수정을 하지 않았으면 수정날자가 뜨지 않는다.
+> + 참조를 하지 않았으면 참조정보는 뜨지 않는다.
+> + 수정을 하였으면 수정날짜가 뜬다.
+> + 참조 하였으면 참조 정보가 뜬다.
+### 페이지 네이션
+> + todo갯수에 따라 페이지의 갯수가 정해진다.
+> + 페이지 버튼을 클릭시 버튼 숫자에 따른 페이지로 이동한다.
+> + "<" 버튼을 누르면 이전 페이지로 이동하고 ">" 버튼을 누르면 다음 페이지로 이동한다.
+> + "<<" 버튼을 누르면 첫 페이지로 이동하고 ">>" 버튼을 누르면 마지막 페이지로 이동한다.
+## 실행방법
+### 설치
+> ```
+> npm install -g yarn
+> yarn install
+### 실행
+> ```
+> yarn start
+> ```
+## 프로젝트 주소 
+> Vercel 주소: [https://to-do-list-orpin-six.vercel.app/](https://to-do-list-orpin-six.vercel.app/)
