@@ -13,7 +13,7 @@ import { EditIcon, DeleteIcon, DoneIcon, CloseIcon } from "../../asset/img/svg";
 import { getDate } from "../../lib/date";
 import inputPaceling from "../../lib/inputParceling";
 
-function Todo({ data, setTodoData, todoData }) {
+function Todo({ data, setTodoData,setSearchData, todoData, searchData, isSearch }) {
   /**체크박스 활성 여부 state */
   const [isCheck, setIsCheck] = useState(data.checked);
   const [isEddit, setIsEddit] = useState(false);
@@ -84,6 +84,23 @@ function Todo({ data, setTodoData, todoData }) {
       );
       setTodoData(tempTodoData);
       setIsEddit(!isEddit);
+      /**검색중 수정할때 검색 데이터도 바꿔주기 */
+      if (isSearch === true) {
+        console.log("edit")
+        const tempSearchData = searchData.map((todo) =>
+        todo.id === data.id
+          ? {
+              ...todo,
+              text: text,
+              reference: reference,
+              modificationDate: getDate(new Date()),
+            }
+          : todo)
+        setSearchData(tempSearchData);
+        /**로컬 스토리지에도 데이터 저장  */
+        const searchDataJson = JSON.stringify(tempSearchData);
+        localStorage.setItem("searchData", searchDataJson);
+      }
       /**로컬 스토리지에도 데이터 저장  */
       const todoDataJson = JSON.stringify(tempTodoData);
       localStorage.setItem("todoData", todoDataJson);

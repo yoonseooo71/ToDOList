@@ -47,7 +47,10 @@ function App() {
               data === "delete" ? null : (
                 <Todo
                   key={data.id}
+                  isSearch={isSearch}
+                  setSearchData={setSearchData}
                   setTodoData={setTodoData}
+                  searchData={searchData}
                   todoData={todoData}
                   data={data}
                 />
@@ -60,7 +63,10 @@ function App() {
               data === "delete" ? null : (
                 <Todo
                   key={data.id}
+                  isSearch={isSearch}
+                  setSearchData={setSearchData}
                   setTodoData={setTodoData}
+                  searchData={searchData}
                   todoData={todoData}
                   data={data}
                 />
