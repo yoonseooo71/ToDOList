@@ -14,7 +14,7 @@
 > + 페이지 네이션 구현
 > + 사용자는 todo를 수정할 수 있다.
 > + 사용자는 todo를 삭제할 수 있다.
-> +사용자는 todo를 완료 또는 미완료로 상태변경을 할 수 있다.
+> + 사용자는 todo를 완료 또는 미완료로 상태변경을 할 수 있다.
 > + 참조하고 있는 todo들이 모두 완료 상태가 아니라면 todo를 완료할 수 없다
 > + todo 글이 생략된 것은 클릭시 자세히 볼수 있다.
 ## 설명 
@@ -45,6 +45,10 @@
 ### 실행
 > ```
 > yarn start
+> ```
+### 빌드
+> ```
+> yarn build
 > ```
 ## 프로젝트 주소 
 > Vercel 주소: [https://to-do-list-orpin-six.vercel.app/](https://to-do-list-orpin-six.vercel.app/)
